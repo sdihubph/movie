@@ -2,9 +2,9 @@
   "name": "backend-course",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon src/server.js",
+    "dev": "nodemon server.js",
     "seed:movies": "node prisma/seed.js"
   },
   "keywords": [],
