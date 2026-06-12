@@ -12,6 +12,12 @@ connectDB();
 
 const app = express();
 
+app.get('/', (req,res) => {
+  console.log("DASHBOARD PAGE");
+
+  res.send("DASHBOARD PAGE");
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/movies', movieRoutes);
@@ -19,7 +25,7 @@ app.use('/auth', authRoutes);
 app.use('/watchlist', watchlistRoutes);
 
 const PORT = process.env.PORT;
-const server = app.listen(PORT || 5001, "0.0.0.0", () => {
+const server = app.listen(PORT || 7000, "0.0.0.0", () => {
   console.log(`server running on port ${PORT}`);
 });
 
